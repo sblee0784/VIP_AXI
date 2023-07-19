@@ -52,7 +52,7 @@ task axi_read_seq::body();
             assert(trans.randomize() with { b_type == WRAP; });
         else
             assert(trans.randomize());
-        trans.id = {1, id};
+        trans.id = {1'b1, id};
         finish_item(trans);
         trans.print();
         #10;
